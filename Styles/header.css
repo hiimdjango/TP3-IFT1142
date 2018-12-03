@@ -1,0 +1,54 @@
+header {
+    background-color: black;
+    height: 200px;
+}
+
+img {
+    height: 200px;
+    border-right: 2px solid white;
+    display: inline-block;
+    float: left;
+    
+}
+
+h1 {
+    color:white;
+    text-align: center;
+    padding-top: 90px;
+    letter-spacing: 3px;
+    font-family: 'Slabo 27px', serif;
+}
+
+ul {
+    list-style-type: none;
+    background-color: black;
+    margin: auto;
+    text-align: center;
+    border-top: 2px solid white;
+}
+
+ul li {
+    display: inline-block;
+    color:white;
+    font-size: 30px;
+    margin-right: 20px;
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    
+}
+
+ul li a:hover {
+    background-color:white;
+    color:black !important; 
+}
+
+ul li a:visited {
+    color:white;
+
+}
+a {
+    text-decoration: none;
+}
