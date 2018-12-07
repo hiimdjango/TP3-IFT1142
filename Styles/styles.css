@@ -1,0 +1,11 @@
+#nouveautes {
+    height: 600px;
+    margin-top:50px;
+}
+
+#nouveautes h1 {
+    color:black;
+    font-family: 'Slabo 27px', serif;
+    letter-spacing: 2px;
+    font-size: 40px;
+}

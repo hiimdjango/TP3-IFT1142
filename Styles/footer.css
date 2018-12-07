@@ -1,0 +1,14 @@
+footer {
+    background-color: black;
+    height: 200px;
+}
+
+footer p {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-top: 30px;
+    padding-left: 30px;
+    font-family: 'Slabo 27px', serif;
+    text-align: center;
+}
