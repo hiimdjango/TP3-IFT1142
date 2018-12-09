@@ -1,6 +1,7 @@
 #nouveautes {
     height: 600px;
     margin-top:50px;
+    font-family: 'Slabo 27px', serif;
 }
 
 #nouveautes h1 {
@@ -9,4 +10,29 @@
     letter-spacing: 2px;
     font-size: 40px;
     margin-left:20px;
+}
+
+#articles table {
+    width: 1000px;
+    margin: auto;
+    margin-top:80px;
+    text-align: center;
+    
+    
+}
+
+#articles td {
+    padding-left:40px;
+    padding-top: 20px;
+}
+
+.name {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size:1.1em;
+}
+
+.des {
+    letter-spacing: 2px;
 }

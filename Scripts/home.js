@@ -22,3 +22,30 @@ function displayDate() {
 //Actualiser l'heure
 setInterval(displayDate,60000);
 document.onload = displayDate();
+
+function displayNouveautes() {
+    var displayZone = document.getElementById('articles');
+    var tableNouveautes = '';
+    tableNouveautes +='<tr>';
+    tableNouveautes += '<td>'+ '<img src ="'+root.childNodes[1].attributes[4].value+'">'+'</td>';
+    tableNouveautes += '<td>'+ '<img src ="'+root.childNodes[3].attributes[4].value+'">'+'</td>';
+    tableNouveautes += '<td>'+ '<img src ="'+root.childNodes[5].attributes[4].value+'">'+'</td>';
+    tableNouveautes += '<td>'+ '<img src ="'+root.childNodes[7].attributes[4].value+'">'+'</td>';
+    
+    tableNouveautes +='<tr>';
+    tableNouveautes += '<td class="name">'+root.childNodes[1].attributes[1].value+'</td>';
+    tableNouveautes += '<td class="name">'+root.childNodes[3].attributes[1].value+'</td>';
+    tableNouveautes += '<td class="name">'+root.childNodes[5].attributes[1].value+'</td>';
+    tableNouveautes += '<td class="name">'+root.childNodes[7].attributes[1].value+'</td>';
+    
+    tableNouveautes +='<tr>';
+    tableNouveautes += '<td class="des">'+root.childNodes[1].attributes[3].value+'</td>';
+    tableNouveautes += '<td class="des">'+root.childNodes[3].attributes[3].value+'</td>';
+    tableNouveautes += '<td class="des">'+root.childNodes[5].attributes[3].value+'</td>';
+    tableNouveautes += '<td class="des">'+root.childNodes[7].attributes[3].value+'</td>';
+
+    
+    displayZone.innerHTML ='<table>'+ tableNouveautes +'</table>';
+}
+
+document.onload = displayNouveautes();
