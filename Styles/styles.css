@@ -1,10 +1,23 @@
-#nouveautes {
-    height: 600px;
+/*Css pour la page d'acceuil*/
+
+#home {
+    height: 700px;
+    margin-bottom: -20px;
+}
+
+#home img {
+    height: 100%;
+    width: 100%;    
+}
+
+/*Css pour produit.html*/
+#affichage {
+    height: 630px;
     margin-top:50px;
     font-family: 'Slabo 27px', serif;
 }
 
-#nouveautes h1 {
+#affichage h1 {
     color:black;
     font-family: 'Slabo 27px', serif;
     letter-spacing: 2px;
@@ -35,4 +48,21 @@
 
 .des {
     letter-spacing: 2px;
+}
+
+#categories {
+    float:right;
+    margin-right: 30px;
+    letter-spacing: 1px;
+}
+
+#buttonAdd {
+    text-align: center;
+}
+
+#button {
+    background-color:black;
+    color:white;
+    border-radius: 10px;
+    padding:10px;
 }

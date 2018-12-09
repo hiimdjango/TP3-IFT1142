@@ -9,16 +9,20 @@
     
     <tableBasse code="004" nom="Table Basse" prix="99.99" description="Table basse en bois de chene pour votre salon" img="../Images/produits/coffeeTable.jpg"></tableBasse>
     
-    <tableTele code="005" nom="Table pour TV" prix="199.99" description="../Table pour TV en bois de chene pour votre salon"></tableTele>
+    <tableTele code="005" nom="Table pour TV" prix="199.99" description="../Table pour TV en bois de chene pour votre salon" img="../Images/produits/tvTable.jpg"></tableTele>
     
-    <lampadaire code="006" nom="Lampadaire" prix="69.99" descrption="Un merveilleux lampadaire pour votre salon"></lampadaire>
+    <lampadaire code="006" nom="Lampadaire" prix="69.99" descrption="Un merveilleux lampadaire pour votre salon" img="../Images/produits/lampe.jpg"></lampadaire>
     
-    <lit code="007" nom="Lit Queen Size" prix="449.99" description="Lit en bois massif Queen Size pour votre chambre a coucher"></lit>
+    <lit code="007" nom="Lit Queen Size" prix="449.99" description="Lit en bois massif Queen Size pour votre chambre a coucher" img="../Images/produits/lit.jpg"></lit>
     
-    <tableDeNuit code="008" nom="Table de Nuit" prix="49.99" description="Table de nuit pour votre chambre a coucher"></tableDeNuit>
+    <tableDeNuit code="008" nom="Table de Nuit" prix="49.99" description="Table de nuit pour votre chambre a coucher" img="../Images/produits/Tdnuit.jpg"></tableDeNuit>
     
-    <commode code="009" nom="Commode 4 Tiroirs" prix="349.99" description="Une merveilleuse commode en bois massif pour votre Chambre a coucher"></commode>
+    <commode code="009" nom="Commode 4 Tiroirs" prix="349.99" description="Une merveilleuse commode en bois massif pour votre Chambre a coucher" img="../Images/produits/commode.jpg"></commode>
     
-    <miroir code="010" nom="Grand Miroir en Bois" prix="89.99" description="Grand miroir de chambre en bois 190x98cm"></miroir>
+    <miroir code="010" nom="Grand Miroir en Bois" prix="89.99" description="Grand miroir de chambre en bois 190x98cm pour votre chambre" img="../Images/produits/mirror.jpg"></miroir>
+    
+    <console code="011" nom="Console en bois" prix="119.99" description="Console en bois massif pour votre salle a manger" img="../Images/produits/console.jpg"></console>
+    
+    <vaisselier code="012" nom="Vaisselier en bois" prix="149.99" description="Vaisselier Blanc 5 Rangements pour votre salle a manger" img="../Images/produits/vaisselier.JPG"></vaisselier>
     
 </produits>
