@@ -49,10 +49,10 @@ var salleAmanger = [
 ];
 
 var salon = [
-    {name:root.childNodes[5].attributes[1].value,code:root.childNodes[5].attributes[0].value,prix:root.childNodes[1].attributes[2].value,description:root.childNodes[5].attributes[3].value,img:root.childNodes[5].attributes[4].value},
-    {name:root.childNodes[7].attributes[1].value,code:root.childNodes[7].attributes[0].value,prix:root.childNodes[1].attributes[2].value,description:root.childNodes[7].attributes[3].value,img:root.childNodes[7].attributes[4].value},
-    {name:root.childNodes[9].attributes[1].value,code:root.childNodes[9].attributes[0].value,prix:root.childNodes[1].attributes[2].value,description:root.childNodes[9].attributes[3].value,img:root.childNodes[9].attributes[4].value},
-    {name:root.childNodes[11].attributes[1].value,code:root.childNodes[11].attributes[0].value,prix:root.childNodes[1].attributes[2].value,description:root.childNodes[11].attributes[3].value,img:root.childNodes[11].attributes[4].value}
+    {name:root.childNodes[5].attributes[1].value,code:root.childNodes[5].attributes[0].value,prix:root.childNodes[5].attributes[2].value,description:root.childNodes[5].attributes[3].value,img:root.childNodes[5].attributes[4].value},
+    {name:root.childNodes[7].attributes[1].value,code:root.childNodes[7].attributes[0].value,prix:root.childNodes[7].attributes[2].value,description:root.childNodes[7].attributes[3].value,img:root.childNodes[7].attributes[4].value},
+    {name:root.childNodes[9].attributes[1].value,code:root.childNodes[9].attributes[0].value,prix:root.childNodes[9].attributes[2].value,description:root.childNodes[9].attributes[3].value,img:root.childNodes[9].attributes[4].value},
+    {name:root.childNodes[11].attributes[1].value,code:root.childNodes[11].attributes[0].value,prix:root.childNodes[11].attributes[2].value,description:root.childNodes[11].attributes[3].value,img:root.childNodes[11].attributes[4].value}
 ]
 var chambre = [
     {name:root.childNodes[13].attributes[1].value,code:root.childNodes[1].attributes[0].value,prix:root.childNodes[13].attributes[2].value,description:root.childNodes[13].attributes[3].value,img:root.childNodes[13].attributes[4].value},
@@ -364,6 +364,7 @@ function clearElement(x) {
 }
 function afficherFacture() {
     var affichage = document.getElementById('panier');
+    panier.style.height="500px";
     var total=0;
     for (var i in selected) {
         total += parseFloat(selected[i].prix)*qty[i];
@@ -372,7 +373,7 @@ function afficherFacture() {
     var tvq = total*0.04;
     var TotalPlusTaxes = total + tps + tvq;
     
-    panier.innerHTML='<h1>Facture</h1><p>Total : '+total+'</p><p>TPS :'+tps.toFixed(2)+'</p><p>TVQ : '+tvq.toFixed(2)+'</p><p>Montant a payer: ' +TotalPlusTaxes.toFixed(2)+'</p><button onclick="imprimer()" class="button" id="buttonImprimer">Imprimer</button>';
+    panier.innerHTML='<h1>Facture</h1><p>Total : '+total.toFixed(2)+'</p><p>TPS :'+tps.toFixed(2)+'</p><p>TVQ : '+tvq.toFixed(2)+'</p><p>Montant a payer: ' +TotalPlusTaxes.toFixed(2)+'</p><button onclick="imprimer()" class="button" id="buttonImprimer">Imprimer</button>';
 }
 
 function imprimer() {

@@ -8,6 +8,7 @@
         <title>Bendaya Mobilier</title>
         <link rel="stylesheet" type="text/css" href="../Styles/header.css">
         <link rel="stylesheet" type="text/css" href="../Styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
     </head>
     
     <body>
@@ -23,6 +24,27 @@
                 <li><a>Panier</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+        </section>
+        <section id="form">
+            <h1>Contact</h1>
+            <form id="sendForm" onsubmit="return checkForm()" name="myForm">
+                Prénom:<br>
+                <input type="text" name="firstname"><span style="color:red"> *</span><br>
+                Nom:<br>
+                <input type="text" name="lastname"><span style="color:red"> *</span><br>
+                Courriel:<br>
+                <input type="email" name="email"><span style="color:red"> *</span><br>
+                Téléphone:<br>
+                <input type="text" name="phone"><span style="color:red"> *</span><span style="font-size:6px; margin-left:10px;">(Format : YYY-YYY-YYY ou YYYYYYYYYY)</span><br>
+                Adresse:<br>
+                <input type="text" name="adress"><br>
+                Code Postal:<br>
+                <input type="text" name="city"><br>
+                <button class="button" type="submit" value="Submit">Valider</button>
+                <button class="button" type="reset" value="Reset">Reinitialiser</button>
+                <p><span style="color:red">*</span>Champ obligatoire</p>
+                <p id="alert" style="color:red;display: none "></p>
+           </form>
         </section>
         <footer>
             <p>
