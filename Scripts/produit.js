@@ -172,6 +172,7 @@ function displayCategorie() {
 //Tableau pour stocker les elements selectionnees
 var selected =[];
 //Verifier si l'element est selectionne
+var qty= [];
 function isChecked(id) {
     if (id.checked == true) {
         return true;
@@ -187,49 +188,65 @@ function addElements() {
     var secondBox = document.getElementById('1');
     var thirdBox = document.getElementById('2');
     var fourthBox = document.getElementById('3');
+    var qty1 = document.getElementById('first');
+    var qty2 = document.getElementById('second');
+    var qty3 = document.getElementById('third');
+    var qty4 = document.getElementById('fourth');
     
     if(isChecked(firstBox)) {
         if(value == '0') {
             selected.push(chambre[0]);
+            qty.push(qty1.value);
         }
         else if(value =='1') {
             selected.push(salleAmanger[0]);
+            qty.push(qty1.value);
         }
         else if(value =='2') {
             selected.push(salon[0]);
+            qty.push(qty1.value);
         }
     }
     if(isChecked(secondBox)) {
         if(value == '0') {
             selected.push(chambre[1]);
+            qty.push(qty2.value);
         }
         else if(value =='1') {
             selected.push(salleAmanger[1]);
+            qty.push(qty2.value);
         }
         else if(value =='2') {
             selected.push(salon[1]);
+            qty.push(qty2.value);
         }
     }
     if(isChecked(thirdBox)) {
         if(value == '0') {
             selected.push(chambre[2]);
+            qty.push(qty3.value);
         }
         else if(value =='1') {
             selected.push(salleAmanger[2]);
+             qty.push(qty3.value);
         }
         else if(value =='2') {
             selected.push(salon[2]);
+             qty.push(qty3.value);
         }
     }
     if(isChecked(fourthBox)) {
         if(value == '0') {
             selected.push(chambre[3]);
+            qty.push(qty4.value);
         }
         else if(value =='1') {
             selected.push(salleAmanger[3]);
+            qty.push(qty4.value);       
         }
         else if(value =='2') {
             selected.push(salon[3]);
+            qty.push(qty4.value);
         }
     }
     //Enregistrer les donnees
@@ -255,29 +272,29 @@ function fillQuantityPopUp() {
             table += '<p class="blocItem">' +'<img src="'+chambre[0].img +'"><br>'+ chambre[0].name + '<br><br><select id="first"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
         else if(value =='1') {
-            table += '<p class="blocItem">' +'<img src="'+salleAmanger[0].img +'"><br>'+ chambre[0].name + '<br><br><select id="second"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
+            table += '<p class="blocItem">' +'<img src="'+salleAmanger[0].img +'"><br>'+ salleAmanger[0].name + '<br><br><select id="first"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
         else if(value =='2') {
-            table += '<p class="blocItem">' +'<img src="'+salon[0].img +'"><br>'+ chambre[0].name + '<br><select id="third"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
+            table += '<p class="blocItem">' +'<img src="'+salon[0].img +'"><br>'+ salon[0].name + '<br><select id="first"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
     }
     if(isChecked(secondBox)) {
         if(value == '0') {
-            table += '<p class="blocItem">' +'<img src="'+chambre[1].img +'"><br>'+ chambre[1].name + '<br><br><select id="first"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
+            table += '<p class="blocItem">' +'<img src="'+chambre[1].img +'"><br>'+ chambre[1].name + '<br><br><select id="second"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
         else if(value =='1') {
             table += '<p class="blocItem">' +'<img src="'+salleAmanger[1].img +'"><br>'+ salleAmanger[1].name + '<br><br><select id="second"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
         else if(value =='2') {
-            table += '<p class="blocItem">' +'<img src="'+salon[1].img +'"><br>'+ salon[1].name + '<br><br><select id="third"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
+            table += '<p class="blocItem">' +'<img src="'+salon[1].img +'"><br>'+ salon[1].name + '<br><br><select id="second"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
     }
     if(isChecked(thirdBox)) {
         if(value == '0') {
-            table += '<p class="blocItem">' +'<img src="'+chambre[2].img +'"><br>'+ chambre[2].name + '<br><br><select id="first"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
+            table += '<p class="blocItem">' +'<img src="'+chambre[2].img +'"><br>'+ chambre[2].name + '<br><br><select id="third"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
         else if(value =='1') {
-            table += '<p class="blocItem">' +'<img src="'+salleAmanger[2].img +'"><br>'+ salleAmanger[2].name + '<br><br><select id="second"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
+            table += '<p class="blocItem">' +'<img src="'+salleAmanger[2].img +'"><br>'+ salleAmanger[2].name + '<br><br><select id="third"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
         else if(value =='2') {
             table += '<p class="blocItem">' +'<img src="'+salon[2].img +'"><br>'+ salon[2].name + '<br><br><select id="third"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
@@ -285,23 +302,79 @@ function fillQuantityPopUp() {
     }
     if(isChecked(fourthBox)) {
         if(value == '0') {
-            table += '<p class="blocItem">' +'<img src="'+chambre[3].img +'"><br>'+ chambre[3].name + '<br><br><select id="first"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
+            table += '<p class="blocItem">' +'<img src="'+chambre[3].img +'"><br>'+ chambre[3].name + '<br><br><select id="fourth"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
         else if(value =='1') {
-            table += '<p class="blocItem">' +'<img src="'+salleAmanger[3].img +'"><br>'+ salleAmanger[3].name + '<br><br><select id="second"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
+            table += '<p class="blocItem">' +'<img src="'+salleAmanger[3].img +'"><br>'+ salleAmanger[3].name + '<br><br><select id="fourth"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
         else if(value =='2') {
-            table += '<p class="blocItem">' +'<img src="'+salon[3].img +'"><br><br>'+ salon[3].name + '<br><br><select id="third"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
+            table += '<p class="blocItem">' +'<img src="'+salon[3].img +'"><br><br>'+ salon[3].name + '<br><br><select id="fourth"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></p>';
         }
     }
     document.getElementById('quantite').innerHTML='<div id="items">'+table+'<br><button class="button" id="validerAdd" onclick="addElements()">Valider</button>';
 }
-function fillQty() {
-    var numbers='';
-    for (var i=1;i<11;i++) {
-        numbers += '<option value='+i+'">'+i+'</option>'    }
-    console.log(numbers);
-    document.getElementsByClassName("qty").innerHTML=numbers;
-    
+
+// Panier
+var tableFilled=false;
+var table = document.createElement("table");
+var fill='<tr><td>Nom du produit</td><td>Quantité</td>';
+var title = document.createElement("h1");
+title.innerHTML="Panier";
+var buttonCheckOut = document.createElement("button");
+buttonCheckOut.innerHTML="Payer";
+buttonCheckOut.setAttribute("onclick","afficherFacture()");
+buttonCheckOut.setAttribute("class","button")
+buttonCheckOut.setAttribute("id","buttonCheckOut")
+// Remplir le tableau
+function fillTable(){
+    if(tableFilled==false) {
+        for (var i in selected) {
+            fill +='<tr>';
+
+            fill += '<td>'+selected[i].name+'</td>';
+            fill += '<td>'+qty[i]+'</td>';
+            fill += '<td><button onclick="clearElement(this)" value="'+i+'">Suprrimer</button>';
+
+            fill += '</tr>';
+
+        }
+        tableFilled=true;
+    }
+}
+//Afficher le Panier
+function displayCart() {
+    fillTable();
+    table.innerHTML=fill;
+    document.getElementById('panier').appendChild(title);
+    document.getElementById('panier').appendChild(table);
+    document.getElementById('panier').appendChild(buttonCheckOut);
+    document.getElementById('affichage').style.display='none';
 }
 
+//supprimer un element
+function clearElement(x) {
+    document.getElementById('panier').removeChild(table);
+    selected.splice(x.value,1);
+    qty.splice(x.value,1);
+    fill='<tr><td>Nom du produit</td><td>Quantité</td>';
+    tableFilled=false;
+    fillTable();
+    displayCart();
+    
+}
+function afficherFacture() {
+    var affichage = document.getElementById('panier');
+    var total=0;
+    for (var i in selected) {
+        total += parseFloat(selected[i].prix)*qty[i];
+    }
+    var tps = total*0.09;
+    var tvq = total*0.04;
+    var TotalPlusTaxes = total + tps + tvq;
+    
+    panier.innerHTML='<h1>Facture</h1><p>Total : '+total+'</p><p>TPS :'+tps.toFixed(2)+'</p><p>TVQ : '+tvq.toFixed(2)+'</p><p>Montant a payer: ' +TotalPlusTaxes.toFixed(2)+'</p><button onclick="imprimer()" class="button" id="buttonImprimer">Imprimer</button>';
+}
+
+function imprimer() {
+    window.print();
+}

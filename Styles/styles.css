@@ -101,3 +101,56 @@
     background-color: white;
     border:black solid 2px;
 }
+
+/* Panier */
+#panier td {
+    border: 2px black solid;
+    padding: 5px;
+    
+}
+
+#panier {
+    height: 500px;
+    font-family: 'Slabo 27px', serif;
+    margin-top:40px;
+
+}
+
+#panier table
+{
+    margin-left:20% ;
+    padding-top: 20px;
+    border-collapse: collapse;
+}
+
+#buttonCheckOut{
+    width: 100px;
+    margin-left:29%;
+    margin-top:20px;
+}
+#panier h1 {
+    margin-left:20px;
+}
+
+#panier p {
+    margin-left: 40px;
+}
+
+#buttonImprimer {
+    margin-left: 80px;
+}
+/*Pour que uniquement la facture soit imprimé*/
+@media print {
+    #panier {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

@@ -3,7 +3,7 @@
 function displayDate() {
     d = new Date();
     str ="";
-    var jours = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
+    var jours = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
     var mois = ["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"];
     str = jours[d]
     document.getElementById('date').innerHTML = jours[d.getDay()] + ", " + d.getDate() + " " + mois[d.getMonth()] + " " + d.getFullYear() + "&nbsp;&nbsp;" + d.getHours() + "h" + d.getMinutes();
