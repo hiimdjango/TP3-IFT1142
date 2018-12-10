@@ -60,9 +60,44 @@
     text-align: center;
 }
 
-#button {
+.button {
     background-color:black;
     color:white;
     border-radius: 10px;
     padding:10px;
+}
+/*Css pour le pop up quantite*/
+
+.blocItem {
+    
+    display: inline-block;
+    text-align: center;
+    margin-right: 40px;
+    font-weight: bold;
+    margin-left: 60px;
+    margin-top:20px;
+    
+}
+
+#quantite img {
+    margin-bottom: 20px;
+}
+
+#quantite {
+    width: 800px;
+    font-family: 'Slabo 27px', serif;
+    position: absolute;
+    left:30%;
+    top:30%
+}
+
+#validerAdd {
+    display:block;
+    margin:auto;
+    margin-bottom: 20px;
+}
+#items {
+    margin:auto; 
+    background-color: white;
+    border:black solid 2px;
 }
