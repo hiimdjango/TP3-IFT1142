@@ -146,9 +146,26 @@
 #buttonImprimer {
     margin-left: 80px;
 }
+
+#facture h1 {
+    margin-left:20px;
+}
+
+#facture p {
+    margin-left: 40px;
+}
+
+#buttonImprimer {
+    margin-left: 80px;
+}
+#facture {
+    height: 450px;
+    margin-top:50px;
+    font-family: 'Slabo 27px', serif;
+}
 /*Pour que uniquement la facture soit imprimé*/
 @media print {
-    #panier {
+    #facture {
         background-color: white;
         height: 100%;
         width: 100%;
@@ -160,6 +177,7 @@
         font-size: 14px;
         line-height: 18px;
     }
+
 }
 
 /*Formulaire de contact*/

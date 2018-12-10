@@ -6,7 +6,7 @@ if (window.XMLHttpRequest)
 else // IE 5/6
     xhttp=new ActiveXObject("Microsoft.XMLHTTP");
 
-xhttp.open("GET","../produits.xml",false);
+xhttp.open("GET","produits.xml",false);
 xhttp.send();
 
 var xmlDoc = xhttp.responseXML; 
@@ -343,6 +343,8 @@ function fillTable(){
 }
 //Afficher le Panier
 function displayCart() {
+    document.getElementById('panier').style.display="block";
+    document.getElementById('facture').style.display="none";
     fillTable();
     table.innerHTML=fill;
     document.getElementById('panier').appendChild(title);
@@ -363,7 +365,9 @@ function clearElement(x) {
     
 }
 function afficherFacture() {
-    var affichage = document.getElementById('panier');
+    var affichage = document.getElementById('facture');
+    document.getElementById('panier').style.display="none";
+    affichage.style.display="block";
     panier.style.height="500px";
     var total=0;
     for (var i in selected) {
@@ -373,7 +377,7 @@ function afficherFacture() {
     var tvq = total*0.04;
     var TotalPlusTaxes = total + tps + tvq;
     
-    panier.innerHTML='<h1>Facture</h1><p>Total : '+total.toFixed(2)+'</p><p>TPS :'+tps.toFixed(2)+'</p><p>TVQ : '+tvq.toFixed(2)+'</p><p>Montant a payer: ' +TotalPlusTaxes.toFixed(2)+'</p><button onclick="imprimer()" class="button" id="buttonImprimer">Imprimer</button>';
+    facture.innerHTML='<h1>Facture</h1><p>Total : '+total.toFixed(2)+'</p><p>TPS :'+tps.toFixed(2)+'</p><p>TVQ : '+tvq.toFixed(2)+'</p><p>Montant a payer: ' +TotalPlusTaxes.toFixed(2)+'</p><button onclick="imprimer()" class="button" id="buttonImprimer">Imprimer</button>';
 }
 
 function imprimer() {
